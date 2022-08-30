@@ -11,6 +11,27 @@
 |
 */
 
+//Базовый пример
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+//Параметры
+$router->get('user2/{id}', function ($id) { //Приер передачи параметров
+    return 'User '.$id;
+});
+
+//Много параметров
+$router->get('posts/{postId}/comments/{commentId}', function ($postId, $commentId) {
+    $res = array("posts" => $postId, "comments" => $commentId); //Ассоциативный массив
+    return  $res;
+});
+
+//Необязательные параметры
+$router->get('user1[/{name}]', function ($name = null) {
+    return $name;
+});
+
+//POST запросы
+$router->post('send_data', 'PostController@get_data');
