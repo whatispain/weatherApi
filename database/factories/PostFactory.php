@@ -12,13 +12,13 @@ class PostFactory extends Factory
     public function definition(): array
     {
     	return [
-    	    'field_1' => $this->faker->sentence
-            'field_2' => $this->faker->sentence
-            'field_3' => $this->faker->sentence
-            'field_4' => $this->faker->sentence
-            'field_5' => $this->faker->sentence
-            'field_6' => $this->faker->sentence
-            'field_7' => $this->faker->sentence
+    	    'field_1' => $this->faker->sentence,
+            'field_2' => $this->faker->sentence,
+            'field_3' => $this->faker->sentence,
+            'field_4' => $this->faker->sentence,
+            'field_5' => $this->faker->sentence,
+            'field_6' => $this->faker->sentence,
+            'field_7' => $this->faker->sentence,
             'field_8' => $this->faker->sentence
     	];
     }
